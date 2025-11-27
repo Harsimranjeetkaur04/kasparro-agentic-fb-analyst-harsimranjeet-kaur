@@ -29,16 +29,24 @@ source .venv/bin/activate
 ```
 
 2. Install dependencies:
-
+```bash
   pip install -r requirements.txt
+```
 
 3. Run the pipeline:
+   ```bash
   python src/run.py "Analyze ROAS drop in last 7 days"
+  ```
 
 4. Run demo script:
+```bash
   chmod +x demo.sh
   ./demo.sh "Analyze ROAS drop in last 7 days"
+```
 
-5. Run tests:
+6. Run tests:
+```bash
   pytest -q
+```
+
 
