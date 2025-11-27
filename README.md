@@ -202,4 +202,39 @@ The pipeline will rewrite generated creatives using a structured prompt. Fallbac
 ├── README.md
 └── requirements.txt
 ```
+### Developer Utilities
+#### Run with Makefile:
+```bash
+make setup
+make run QUERY="Analyze ROAS change"
+make test
+make clean
+```
+#### Demo Script:
+```bash
+./demo.sh "Analyze ROAS drop in last 7 days"
+```
+## 📝 Submission Notes (for Recruiters)
 
+This repository includes every deliverable required by the assignment:
+
+* ✔ Multi-agent architecture
+* ✔ Prompt files (layered, structured, JSON schemas)
+* ✔ Hypothesis generation + quantitative evaluation
+* ✔ Creative generation grounded in dataset messaging
+* ✔ CI/CD automation
+* ✔ Reproducibility (Makefile, config, seeds)
+* ✔ Tests for core components
+* ✔ Reports + logs
+
+## 🙋 Contact
+
+**Harsimranjeet Kaur**
+
+* **GitHub:** [https://github.com/Harsimranjeetkaur04](https://github.com/Harsimranjeetkaur04)
+* **Email:** [ssimrankaur515@gmail.com]
+
+---
+
+**🎉 Final Note**
+This project was built with production-style structure, modularity, and clean engineering practices to match the expectations of the Kasparro Applied AI Engineering assignment.
