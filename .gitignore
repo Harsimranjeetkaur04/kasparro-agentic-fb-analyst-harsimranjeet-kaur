@@ -1,0 +1,19 @@
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+# Python caches
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Testing / CI
+.pytest_cache/
+coverage.xml
+htmlcov/
+
+# Editor / OS
+.vscode/
+.DS_Store
+*.swp
