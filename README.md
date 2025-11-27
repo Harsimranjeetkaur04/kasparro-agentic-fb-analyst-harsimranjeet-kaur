@@ -26,8 +26,10 @@ python -m venv .venv
 source .venv/bin/activate
 # Windows (Git Bash)
 .venv/Scripts/activate
+```
 
 2. Install dependencies:
+
   pip install -r requirements.txt
 
 3. Run the pipeline:
@@ -39,3 +41,4 @@ source .venv/bin/activate
 
 5. Run tests:
   pytest -q
+
