@@ -28,16 +28,16 @@ The dataset includes the following columns used by the **Data Agent** and **Insi
 | `revenue` | Float | Total value generated in USD. |
 | `roas` | Float | Return on Ad Spend (Revenue / Spend). |
 
-## Usage in System
+## Usage & Notes
+- The DataAgent canonicalizes noisy `campaign_name` values using fuzzy matching. Keep the original raw names in place; DataAgent will produce canonical IDs in the summary.
+- Creative messages in the dataset are used as **anchor examples** to generate grounded creative recommendations — avoid replacing them unless necessary.
+- If you want to use a full dataset, update `config/config.yaml` → `data_csv` to point to the new file path.
+- For reproducibility during evaluation, keep the sample CSV in `data/` and do not remove it from the repository.
 
-1.  **Ingestion**: The `Data Agent` loads this CSV to perform aggregations (e.g., "Sum spend by campaign").
-2.  **Analysis**: The `Insight Agent` looks for correlations between `creative_message` and low `roas`.
-3.  [cite_start]**Creative Generation**: The `Creative Improvement Generator` uses the `creative_message` column as few-shot examples to generate new, better copy for underperforming ads[cite: 8].
+## Size and privacy
+- The sample file is synthetic and safe to include in a public repo.
+- For real production or sensitive datasets, do NOT commit raw data — instead provide a small synthetic sample and instructions for how to mount or upload the real data.
 
-## Configuration
-
-To switch between the sample data and a full dataset, modify `config/config.yaml`:
-
-```yaml
-use_sample_data: true
-# Set to false to load from a different path specified in config
+## Troubleshooting
+- If the pipeline reports "CSV not found", check `config/config.yaml` → `data_csv` and ensure the relative path points to this file.
+- If prompts complain about lack of `creative_message` anchors, ensure the CSV includes non-empty `creative_message` values for the campaigns you want creatives for.
