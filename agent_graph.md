@@ -21,8 +21,9 @@ graph TD
 
     %% Data Sources
     CSV[(sample_fb_ads.csv)] -.-> Data
+```
 
-    ## Agent Roles & Responsibilities
+## Agent Roles & Responsibilities
 
 ### 1. Planner Agent (`planner.py`)
 * **Role:** The orchestrator. It decomposes the high-level user query (e.g., "Why did ROAS drop?") into a step-by-step execution plan.
